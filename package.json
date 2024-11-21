@@ -1,0 +1,32 @@
+{
+  "name": "@agm-stack/eslint-config-next",
+  "version": "0.0.1",
+  "description": "ESlint config for Next.js 15+ projects (using Typescript)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "next.js",
+    "typescript"
+  ],
+  "author": "Adrian-Gabriel Manduc",
+  "license": "MIT",
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^2.11.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sort-destructure-keys": "^2.0.0"
+  },
+  "peerDependencies": {
+    "eslint": "^8.0.0",
+    "eslint-config-next": "^15.0.3",
+    "typescript": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  }
+}
