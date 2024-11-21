@@ -40,7 +40,7 @@ typescript (v4+)
 To install the required peer dependencies, run:
 
 ```bash
-npm install --save-dev eslint eslint-config-next typescript
+npm install --save-dev eslint@^8 eslint-config-next@^15 typescript
 ```
 
 ## License
