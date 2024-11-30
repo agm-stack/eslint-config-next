@@ -234,8 +234,10 @@ module.exports = {
     "no-multiple-empty-lines": [
       "error",
       {
-        max: 1,
-      },
+        "max": 2,
+        "maxEOF": 0,
+        "maxBOF": 1
+      }
     ],
     "no-trailing-spaces": "error",
     "no-shadow": "off",

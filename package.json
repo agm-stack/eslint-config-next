@@ -1,6 +1,6 @@
 {
   "name": "@agm-stack/eslint-config-next",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "ESlint config for Next.js 15+ projects (using Typescript)",
   "main": "index.js",
   "scripts": {
