@@ -95,6 +95,7 @@ const config = [
       // Stylistic Rules
       "sort-destructure-keys/sort-destructure-keys": "warn",
       "@stylistic/quotes": ["warn", "double"],
+      "@stylistic/jsx-quotes": ["warn", "prefer-double"],
       "@stylistic/padded-blocks": "off",
       "@stylistic/quote-props": ["error", "as-needed"],
       "@stylistic/no-multi-spaces": [
