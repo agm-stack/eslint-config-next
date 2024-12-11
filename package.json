@@ -1,6 +1,6 @@
 {
   "name": "@agm-stack/eslint-config-next",
-  "version": "1.0.2",
+  "version": "2.0.0",
   "description": "ESLint (supporting only version 9 or higher) configuration for Next.js 15+ projects utilizing TypeScript",
   "main": "index.js",
   "scripts": {
@@ -18,9 +18,7 @@
     "@stylistic/eslint-plugin": "^2.11.0",
     "eslint-config-next": "^15.0.3",
     "eslint-plugin-react-hooks": "^5.0.0",
-    "eslint-plugin-readable-tailwind": "^1.8.2",
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
-    "eslint-plugin-tailwindcss": "^3.17.5",
     "typescript-eslint": "^8.16.0"
   },
   "peerDependencies": {

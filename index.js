@@ -7,8 +7,6 @@ const react = require("eslint-plugin-react");
 const parser = require("@typescript-eslint/parser");
 const importPlugin = require("eslint-plugin-import");
 const sortKeys = require("eslint-plugin-sort-destructure-keys");
-const readableTailwind = require('eslint-plugin-readable-tailwind');
-const tailwind = require('eslint-plugin-tailwindcss');
 
 const compat = new FlatCompat({
   baseDirectory: __dirname
@@ -22,7 +20,6 @@ const config = [
   ),
   react.configs.flat.recommended,
   ...compat.extends("eslint-config-next"),
-  ...tailwind.configs['flat/recommended'],
   {
     name: 'ESLint Config - Next.JS',
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
@@ -46,7 +43,6 @@ const config = [
       'react-hooks': hooks,
       'import': importPlugin,
       'sort-destructure-keys': sortKeys,
-      'readable-tailwind': readableTailwind
     },
     rules: {
       ...hooks.configs.recommended.rules,
@@ -69,12 +65,6 @@ const config = [
       "no-undef": ["error"],
       "no-useless-assignment": "off",
       "no-use-before-define": "off",
-
-      // Tailwind Rules
-      'readable-tailwind/multiline': ['warn', {
-        classesPerLine: 14, group: 'newLine', preferSingleLine: true, lineBreakStyle: 'windows'
-      }],
-      'readable-tailwind/no-unnecessary-whitespace': ['warn', { allowMultiline: true, }],
 
       // TypeScript Rules
       "@typescript-eslint/no-non-null-assertion": "warn",
