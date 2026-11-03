@@ -1,0 +1,112 @@
+{
+  "name": "@agm-stack/eslint-config-next",
+  "version": "0.1.0",
+  "description": "Opinionated, strict ESLint flat config for Next.js, React and TypeScript projects, with optional Tailwind CSS and i18n layers.",
+  "keywords": [
+    "eslint",
+    "eslintconfig",
+    "eslint-config",
+    "eslintplugin",
+    "flat-config",
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwindcss"
+  ],
+  "author": "Adrian Manduc",
+  "license": "MIT",
+  "homepage": "https://github.com/agm-stack/eslint-config-next#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agm-stack/eslint-config-next.git"
+  },
+  "bugs": {
+    "url": "https://github.com/agm-stack/eslint-config-next/issues"
+  },
+  "type": "module",
+  "main": "./src/index.js",
+  "types": "./src/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./next": {
+      "types": "./src/next.d.ts",
+      "default": "./src/next.js"
+    },
+    "./tailwind": {
+      "types": "./src/tailwind.d.ts",
+      "default": "./src/tailwind.js"
+    },
+    "./legacy": {
+      "types": "./src/legacy.d.cts",
+      "require": "./src/legacy.cjs",
+      "default": "./src/legacy.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "test": "node --test \"tests/**/*.test.js\"",
+    "pack:check": "npm pack --dry-run",
+    "prepublishOnly": "npm run lint && npm test",
+    "prepare": "husky",
+    "commitlint": "commitlint"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.39.5",
+    "@stylistic/eslint-plugin": "^5.10.0",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-react": "^7.37.5",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-sort-destructure-keys": "^3.0.0",
+    "globals": "^17.14.0",
+    "typescript-eslint": "^8.72.1"
+  },
+  "peerDependencies": {
+    "eslint": "^9.22.0",
+    "eslint-config-next": ">=16.0.0",
+    "eslint-plugin-tailwindcss": "^4.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "eslint-config-next": {
+      "optional": true
+    },
+    "eslint-plugin-tailwindcss": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "@types/react": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.4.5",
+    "eslint-plugin-tailwindcss": "^4.4.0",
+    "husky": "^9.1.7",
+    "next": "^16.4.5",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "tailwindcss": "^4.3.4",
+    "typescript": "^5.9.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

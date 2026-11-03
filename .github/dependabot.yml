@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: weekly
+    # Conventional Commit titles so release-please picks them up:
+    # runtime deps -> "fix(deps): …" (patch release), dev deps -> "chore(deps-dev): …" (no release).
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
+    ignore:
+      # ESLint 10 is blocked until eslint-plugin-react and eslint-plugin-import support it (docs/design.md).
+      - dependency-name: eslint
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@eslint/js"
+        update-types: ["version-update:semver-major"]
+    groups:
+      eslint:
+        patterns: ["eslint", "@eslint/*", "eslint-*", "@stylistic/*", "typescript-eslint", "globals"]
+      tooling:
+        dependency-type: development
+        patterns: ["@commitlint/*", "husky"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    commit-message:
+      prefix: ci

@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Node ${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        node: [24.x, 26.x]
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: ${{ matrix.node }}
+          cache: npm
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - name: Smoke-test the packed tarball
+        run: |
+          npm pack
+          mkdir -p "$RUNNER_TEMP/consumer" && cd "$RUNNER_TEMP/consumer" && npm init -y > /dev/null
+          npm install --no-audit --no-fund "$GITHUB_WORKSPACE"/agm-stack-eslint-config-next-*.tgz eslint@9
+          node --input-type=module -e "const { default: agm } = await import('@agm-stack/eslint-config-next'); if (!agm.configs.recommended) process.exit(1);"
+          node -e "require('@agm-stack/eslint-config-next/legacy')"
