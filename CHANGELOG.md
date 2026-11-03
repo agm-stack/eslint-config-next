@@ -6,6 +6,13 @@ from [Conventional Commits](https://www.conventionalcommits.org/), and the
 project follows [Semantic Versioning](https://semver.org/) as described in the
 [versioning policy](README.md#versioning-policy).
 
+## 1.0.0 (2026-11-03)
+
+
+### Features
+
+* initial release ([cb4bb9b](https://github.com/agm-stack/eslint-config-next/commit/cb4bb9b4a5a68750aa6891eecd1f98091edcf913))
+
 ## 0.1.0
 
 Initial release.

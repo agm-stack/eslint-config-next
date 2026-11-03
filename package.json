@@ -1,6 +1,6 @@
 {
   "name": "@agm-stack/eslint-config-next",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Opinionated, strict ESLint flat config for Next.js, React and TypeScript projects, with optional Tailwind CSS and i18n layers.",
   "keywords": [
     "eslint",
