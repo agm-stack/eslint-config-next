@@ -16,6 +16,9 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "@eslint/js"
         update-types: ["version-update:semver-major"]
+      # typescript-eslint only supports TypeScript <6.1; move when its peer range does.
+      - dependency-name: typescript
+        update-types: ["version-update:semver-major"]
     groups:
       eslint:
         patterns: ["eslint", "@eslint/*", "eslint-*", "@stylistic/*", "typescript-eslint", "globals"]
@@ -28,3 +31,7 @@ updates:
       interval: monthly
     commit-message:
       prefix: ci
+    # One PR per month for all action bumps instead of one per action.
+    groups:
+      actions:
+        patterns: ["*"]
