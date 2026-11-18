@@ -6,6 +6,13 @@ from [Conventional Commits](https://www.conventionalcommits.org/), and the
 project follows [Semantic Versioning](https://semver.org/) as described in the
 [versioning policy](README.md#versioning-policy).
 
+## [0.1.1](https://github.com/agm-stack/eslint-config-next/compare/v0.1.0...v0.1.1) (2026-11-18)
+
+
+### Bug Fixes
+
+* **deps:** Update dependencies ([#10](https://github.com/agm-stack/eslint-config-next/issues/10)) ([3a010ab](https://github.com/agm-stack/eslint-config-next/commit/3a010ab7f30894ef24f255055bafb3b07014004f))
+
 ## 0.1.0
 
 Initial release.
